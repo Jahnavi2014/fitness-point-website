@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitnessPoint - Explore More</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f6f7f8;
+            color: #202124;
+        }
+
+        /* Header */
+        .header {
+            background:linear-gradient(90deg, #f8b5c1 0%,  #d4bde7 50%, #b7c2f1 100% );
+            color: #0b0b0bff;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Container */
+        .content {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Section */
+        .section {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .section:hover {
+            transform: scale(1.01);
+        }
+
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: #42d1d4;
+        }
+
+        .section p {
+            line-height: 1.6;
+            color: #424242;
+        }
+
+        /* Back button */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background:black;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+        }
+
+        .back-btn:hover {
+            background: #42d1d4;
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">FitnessPoint – Explore More</div>
+
+    <div class="content">
+
+        <!-- About -->
+        <div class="section">
+            <h2>About FitnessPoint</h2>
+            <p>
+                FitnessPoint is your smart fitness companion designed to help you track your workouts, 
+                monitor your progress, and stay motivated. Whether you're a beginner or a gym pro, FitnessPoint 
+                offers easy-to-follow plans and real-time analytics to transform your fitness journey.
+            </p>
+        </div>
+
+        <!-- Features -->
+        <div class="section">
+            <h2>Key Features</h2>
+            <p>
+                ✔ Personalized workout plans based on your goals  
+                ✔ Track progress: weight, calories, steps, measurements  
+                ✔ Diet & nutrition guidance  
+                ✔ Home & gym workout modes  
+                ✔ Daily reminders & motivational streaks  
+                ✔ Fitness challenges and rewards  
+                ✔ Clean and simple Google-style interface  
+            </p>
+        </div>
+
+        <!-- Mission -->
+        <div class="section">
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to make fitness accessible for everyone by providing 
+                simple, effective, and scientifically backed fitness tools. 
+                FitnessPoint aims to help users build lifelong healthy habits.
+            </p>
+        </div>
+
+        <!-- Vision -->
+        <div class="section">
+            <h2>Our Vision</h2>
+            <p>
+                To become India's most trusted and user-friendly fitness platform powered by smart technology 
+                and personalized coaching. FitnessPoint wants to inspire millions to live healthier and stronger lives.
+            </p>
+        </div>
+
+        <!-- Benefits -->
+        <div class="section">
+            <h2>Why Choose FitnessPoint?</h2>
+            <p>
+                ⭐ User-friendly design  
+                ⭐ Smart, data-driven workouts  
+                ⭐ Motivational daily tracking  
+                ⭐ Perfect for beginners and advanced users  
+                ⭐ Reliable, consistent progress insights  
+            </p>
+        </div>
+
+        <button class="back-btn" onclick="goBack()">⬅ Back to Home</button>
+
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "index.html"; // change to your main page name
+        }
+    </script>
+
+</body>
+</html>

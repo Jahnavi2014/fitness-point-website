@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitnessPoint - Get Started</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f3f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            width: 400px;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: #42d1d4;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #202124;
+        }
+
+        p {
+            font-size: 15px;
+            color: #5f6368;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .steps {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .steps p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .steps p::before {
+            content: "✔";
+            margin-right: 8px;
+            color: #1a73e8;
+            font-weight: bold;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: #0c0c0cff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #42d1d4;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="logo">FitnessPoint</div>
+
+    <h2>Welcome to FitnessPoint!</h2>
+
+    <p>Start your journey to a healthier, stronger, and more active life. Follow the simple steps below to get started.</p>
+
+    <div class="steps">
+        <p>Set your fitness goals</p>
+        <p>Track your workouts and progress</p>
+        <p>Follow personalized workout plans</p>
+        <p>Stay motivated and consistent</p>
+    </div>
+
+    <button class="btn" onclick="startJourney()">Start Your Fitness Journey</button>
+
+</div>
+
+<script>
+    function startJourney() {
+        // Example: redirect to main dashboard or home page
+        alert("Let's start! Redirecting to your Fitness Dashboard...");
+        window.location.href = "index.html"; // Change to your dashboard/main page
+    }
+</script>
+
+</body>
+</html>

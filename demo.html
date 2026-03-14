@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fitness Classes Popup</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#f4f4f4;
+  padding:40px;
+}
+
+/* cards */
+.popular__grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.popular__card{
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.popular__card h4{
+  margin:0;
+}
+
+.popular__card span{
+  font-size:26px;
+  color:#42c8c9;
+  cursor:pointer;
+}
+
+/* popup */
+.popup-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.5);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+.popup-card{
+  width:360px;
+  background:#fff;
+  border-radius:14px;
+  padding:20px;
+  position:relative;
+  animation:zoom .2s ease;
+}
+
+@keyframes zoom{
+  from{transform:scale(.8);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+
+.popup-card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:12px;
+}
+
+.popup-card h2{
+  margin:5px 0;
+  color:#42c8c9;
+}
+
+.popup-card p{
+  font-size:14px;
+  color:#555;
+}
+
+.close-btn{
+  position:absolute;
+  top:10px;
+  right:14px;
+  font-size:22px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h2>What Do You Want To Join?</h2>
+
+<div class="popular__grid">
+
+  <div class="popular__card">
+    <div>
+      <h4>Cardio Strength</h4>
+      <p>Burn calories</p>
+    </div>
+    <span onclick="openPopup(
+      'Cardio Strength',
+      'Boost heart health and stamina with intense cardio workouts.',
+      'https://images.unsplash.com/photo-1554284126-aa88f22d8b74'
+    )">
+      <i class="ri-arrow-right-fill"></i>
+    </span>
+  </div>
+
+  <div class="popular__card">
+    <div>
+      <h4>Yoga</h4>
+      <p>Flexibility & calm</p>
+    </div>
+    <span onclick="openPopup(
+      'Yoga',
+      'Improve flexibility, balance, and mental peace.',
+      'https://images.unsplash.com/photo-1554306274-f23873d9a26c'
+    )">
+      <i class="ri-arrow-right-fill"></i>
+    </span>
+  </div>
+
+</div>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="classPopup">
+  <div class="popup-card">
+    <span class="close-btn" onclick="closePopup()">×</span>
+    <img id="popupImg">
+    <h2 id="popupTitle"></h2>
+    <p id="popupDesc"></p>
+  </div>
+</div>
+
+<script>
+const popup = document.getElementById("classPopup");
+const titleEl = document.getElementById("popupTitle");
+const descEl = document.getElementById("popupDesc");
+const imgEl = document.getElementById("popupImg");
+
+function openPopup(title, desc, img){
+  titleEl.innerText = title;
+  descEl.innerText = desc;
+  imgEl.src = img;
+  popup.style.display = "flex";
+}
+
+function closePopup(){
+  popup.style.display = "none";
+}
+</script>
+
+</body>
+</html>
