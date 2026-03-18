@@ -48,4 +48,4 @@ Fitness Point is a modern fitness website developed using HTML, CSS, and JavaScr
 
 
 
- git clone https://github.com/your-username/fitness-point-website.git
+ GitHub: https:https://github.com/Jahnavi2014
